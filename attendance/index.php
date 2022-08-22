@@ -10,7 +10,7 @@
     {
 		if(isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) && !empty($_POST['password']))
 		{
-			print_R($_POST);
+			// print_R($_POST);
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 
@@ -33,12 +33,12 @@
 			}
 			else
 			{
-				echo "Wrong username or password";
+				echo '<script>alert("Wrong username or password")</script>';
 			}
 		}
 		else
 		{
-			echo "Username and password fields should not be blank";
+			echo '<script>alert("Username and password fields should not be blank")</script>';
 		}
 	}
 ?>
@@ -53,7 +53,7 @@
     <meta name="author" content="">
     <link rel="icon" href="bin3.png">
 
-    <title>SmartAttend - biometric attendance system for classrooms</title>
+    <title>SmartAttend - Biometric Attendance System for Classrooms</title>
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 

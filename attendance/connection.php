@@ -1,26 +1,14 @@
-
-
-
-
 <?php
+ $servername = "localhost";
  $user = 'root';
  $pass = '';
- $db = "attendance";
+ $db = "biometric";
 
- $db = new mysqli ('localhost', $user, $pass, $db) or die;
-echo"Connected";
-
-?>
-
-
-<!-- 
-    $servername = "localhost";
-    $username = "phpmyadmin";
-    $password = "1235";
-
+ $conn = new mysqli ($servername, $user, $pass, $db) or die;
+ // echo "Connected";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=biometric", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //echo "Connected successfully"; 
@@ -28,4 +16,6 @@ try {
 catch(PDOException $e)
     {
     echo "Connection failed: " . $e->getMessage();
-    } -->
+    } 
+
+?>
